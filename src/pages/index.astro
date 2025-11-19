@@ -1,11 +1,37 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Home – Felipe Oliveira – Design & Game Lab";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title={pageTitle}>
+  <section class="hero">
+    <h1>Design, games, and experiences that feel alive.</h1>
+    <p>
+      I’m Felipe Oliveira, a digital designer and UX student based in Canada,
+      blending my background in advertising with my passion for games and interactive experiences.
+    </p>
+
+    <div class="hero-actions">
+      <a href="/portfolio" class="btn primary">View selected work</a>
+      <a href="/game-journal" class="btn ghost">See my game journal</a>
+    </div>
+  </section>
+
+  <section class="split-section">
+    <div>
+      <h2>Product & UX Design</h2>
+      <p>
+        I’ve been working in design for over a decade, from ad campaigns and digital out-of-home
+        to web design and UX. Today, I focus on interfaces and experiences that are inclusive,
+        accessible, and visually compelling.
+      </p>
+    </div>
+    <div>
+      <h2>Games as a Design Lab</h2>
+      <p>
+        From competitive worlds to survival games like Project Zomboid, I study how game mechanics,
+        UI, and feedback loops keep people engaged—and I bring those learnings back into my design work.
+      </p>
+    </div>
+  </section>
 </Layout>

@@ -1,18 +1,21 @@
 ---
 import "../styles/global.css";
 
-const { title = "Felipe Oliveira – Design & Game Lab" } = Astro.props;
+const {
+  title = "Selected Work",
+  subtitle = "A collection of design projects that mix storytelling, digital thinking, and visual identity."
+} = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>{title}</title>
+    <title>{title} – Felipe Oliveira</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
-  <body>
-    <!-- HEADER -->
+  <body class="highlight-layout">
+    <!-- mesmo header do resto do site -->
     <header class="site-header">
       <div class="container header-inner">
         <a href="/" class="logo">Felipe Oliveira</a>
@@ -27,14 +30,21 @@ const { title = "Felipe Oliveira – Design & Game Lab" } = Astro.props;
       </div>
     </header>
 
-    <!-- MAIN -->
-    <main class="site-main">
-      <div class="container">
+    <main class="site-main highlight-main">
+      <!-- HERO do portfolio -->
+      <section class="highlight-hero">
+        <div class="container highlight-hero-inner">
+          <h1>{title}</h1>
+          {subtitle && <p>{subtitle}</p>}
+        </div>
+      </section>
+
+      <!-- Conteúdo da página -->
+      <div class="container highlight-content">
         <slot />
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container">
         <p>© {new Date().getFullYear()} Felipe Oliveira – Design & Game Lab</p>

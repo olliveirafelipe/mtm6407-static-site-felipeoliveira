@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+const pageTitle = "Game Journal – How games shape my design";
+---
+
+<Layout title={pageTitle}>
+  <section class="page-intro">
+    <h1>Game Journal</h1>
+    <p>
+      Games are more than a hobby for me—they’re a lab for understanding systems,
+      interfaces, and player behavior. Here I connect what I play with how I design.
+    </p>
+  </section>
+
+  <section class="card-grid">
+    <!-- CARD 1 -->
+    <article class="card">
+      <div class="card-tag">
+        <span class="card-icon">🧟</span>
+        <span class="card-label">Survival UX</span>
+      </div>
+
+      <h2>Project Zomboid</h2>
+      <p>
+        Project Zomboid looks simple at first, but its systems are deep and unforgiving.
+        It taught me a lot about information overload, tooltips, and how small interface
+        decisions can mean the difference between survival and frustration.
+      </p>
+      <p>
+        I pay attention to how the game surfaces critical information—like health,
+        moodles, and inventory—and how that can inspire cleaner, more honest interfaces
+        in real products.
+      </p>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="card">
+      <div class="card-tag">
+        <span class="card-icon">⚔️</span>
+        <span class="card-label">Competitive clarity</span>
+      </div>
+
+      <h2>Riot Games</h2>
+      <p>
+        In competitive games, clarity is everything. Cooldowns, skill ranges, and
+        feedback must be readable in a fraction of a second. Riot’s approach is a
+        masterclass in visual language, iconography, and motion.
+      </p>
+      <p>
+        I bring these lessons into UX: users shouldn’t have to “fight” the interface to
+        understand what’s happening or what their options are.
+      </p>
+    </article>
+  </section>
+</Layout>
